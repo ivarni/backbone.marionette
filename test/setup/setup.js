@@ -1,11 +1,14 @@
+import _ from 'underscore';
+import Backbone from 'backbone';
+import jQuery from 'jquery';
+import Marionette from '../../src/backbone.marionette';
+import Babysitter from 'backbone.babysitter';
+import Radio from 'backbone.radio';
+
 module.exports = function() {
-  var _ = require('underscore');
-  var Backbone = require('backbone');
-  var jQuery = require('jquery');
   Backbone.$ = jQuery;
-  Backbone.ChildViewContainer = require('backbone.babysitter');
-  Backbone.Radio = require('backbone.radio');
-  var Marionette = require('../../src/backbone.marionette');
+  Backbone.ChildViewContainer = Babysitter;
+  Backbone.Radio = Radio;
 
   global.$ = global.jQuery = jQuery;
   global._ = _;
